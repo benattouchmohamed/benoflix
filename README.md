@@ -23,5 +23,6 @@ This is a TV series watching application built with **React** that allows users 
 
 ```bash
 git clone https://github.com/benattouchmohamed/benoflix-app.git
-cd benoflix
+cd benoflix-app
+
 
