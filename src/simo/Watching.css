@@ -1,0 +1,240 @@
+/* WatchingMovie.css */
+
+/* General styles */
+.watching-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .watching-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    color: #f8f8f8;
+  }
+  
+  /* Label styling for the provider select */
+  .watching-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    display: block;
+  }
+  
+  /* Provider select dropdown */
+  .watching-container select {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .watching-container select:hover {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .watching-container select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Video player */
+  .video-player {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+  }
+  
+  .video-player iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+  
+  /* Loading GIF */
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 450px;
+    border-radius: 10px;
+  }
+  
+  .loading-gif {
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Keyframe for spin animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Episode cards */
+  .episode-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .episode-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .episode-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .episode-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .episode-card p {
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  
+  .episode-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Episode navigation buttons */
+  .episode-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .episode-navigation button {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .episode-navigation button:hover {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  
+  /* Episode details */
+  .episode-details {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .episode-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .episode-details p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  .episode-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    /* Mobile view adjustments */
+    .watching-container h1 {
+      font-size: 2rem;
+    }
+  
+    .video-player iframe {
+      height: 350px;
+    }
+  
+    .episode-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .episode-card {
+      width: 90%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+  
+    .episode-navigation {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .episode-navigation button {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Smaller screens like phones */
+    .watching-container {
+      padding: 10px;
+    }
+  
+    .watching-container h1 {
+      font-size: 1.8rem;
+    }
+  
+    .episode-navigation button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  
+    .episode-card {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  

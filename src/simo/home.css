@@ -1,0 +1,212 @@
+/* home.css */
+
+/* General Reset */
+body, h1,  h3, p, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .search-container {
+    display: flex; /* Align input element within the container */
+    justify-content: center; /* Center the search bar horizontally */
+    align-items: center; /* Vertically center the search bar */
+    margin: 40px auto; /* Space around the search bar */
+    max-width: 600px; /* Limit the width */
+}
+
+.search-bar {
+    width: 100%; /* Take full width of the container */
+    padding: 12px 20px; /* Add padding inside the input */
+    font-size: 1rem; /* Make the text inside the input readable */
+    font-family: 'Noto Sans', sans-serif; /* Use the same font as other elements */
+    border: 2px solid #ccc; /* Light border around the search bar */
+    border-radius: 25px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for subtle depth */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition on focus */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #3498db; /* Blue border on focus */
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3); /* Enhance shadow on focus */
+}
+
+.search-bar::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+    font-style: italic; /* Italicize the placeholder text */
+}
+
+  .recommended h2 {
+    font-family: 'Noto Sans', sans-serif; /* Your chosen font */
+    font-size: 2rem; /* Larger, prominent font size */
+    color: #000000; /* Dark, professional text color */
+    text-align: center; /* Center the title */
+    font-weight: 700; /* Bold for emphasis */
+    font-style: italic; /* Italicized text for elegance */
+    letter-spacing: 1px; /* Slight letter spacing */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .home {
+    padding: 20px;
+  }
+  
+  /* Search Bar */
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+  }
+  
+  /* Movies and Series Section */
+  .recommended-movies, .recommended-series {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  
+  .movie-list, .series-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .movie-card {
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.2s;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+  }
+  
+  .movie-info {
+    padding: 10px;
+  }
+  
+  .movie-info h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-family: initial;
+  }
+  
+  .movie-info p {
+    font-size: 12px;
+    
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .movie-card {
+      width: 120px;
+    }
+  
+    .movie-poster {
+      height: 180px;
+    }
+  
+    .search-bar {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movie-card {
+      width: 100px;
+    }
+  
+    .movie-poster {
+      height: 150px;
+    }
+  
+    h2 {
+      font-size: 16px;
+    }
+  
+    .search-bar {
+      font-size: 14px;
+    }
+  }
+  
+  /* Connection Warning */
+  .connection-warning {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffeb3b;
+    color: #333;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  .movie-rating {
+    font-size: 2rem; /* Adjust the font size */
+    font-weight: bold; /* Make the stars bold */
+    color: #ff9800; /* Yellow color for the stars */
+    opacity: 0; /* Start with opacity 0 */
+    transform: scale(0.8); /* Initial smaller scale */
+    animation: rating-animation 1s forwards; /* Animation effect */
+  }
+  
+  @keyframes rating-animation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* End with full scale */
+    }
+  }
+  
+  /* Optional: hover effect */
+  .movie-rating:hover {
+    color: #ff5722; /* Darker yellow-orange color when hovered */
+    transform: scale(1.1); /* Slightly bigger scale when hovered */
+  }
+  .loading-gif {
+    width: 50px;  /* Adjust the size of the gif */
+    height: 50px; /* Adjust the size of the gif */
+    margin-right: 10px; /* Optional: space between the gif and the text */
+    animation: spin 1.5s linear infinite; /* Animation for spinning */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);  /* Start from 0 degrees */
+    }
+    100% {
+      transform: rotate(360deg);  /* Rotate to 360 degrees */
+    }
+  }
+  
+  
+  
