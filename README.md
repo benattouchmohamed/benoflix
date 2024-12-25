@@ -22,5 +22,6 @@ This is a TV series watching application built with **React** that allows users 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/tv-series-watching-app.git
-cd tv-series-watching-app
+git clone https://github.com/benattouchmohamed/benoflix.git
+cd benoflix
+
